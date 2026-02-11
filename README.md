@@ -1,9 +1,13 @@
 # UPX
 
-upx is a simple cli utility and library for parsing and extracting unity packages.  
-it also contains functionality to examine unity packages for suspicious files (scripts and dlls)  
-they are suspicious because they can contain malware. when i download an outfit on booth.pm it shouldn't come with any scripts
+CLI tool for extracting `.unitypackage` archives.
 
+It can also scan and detect potentially unsafe files such as: `.cs` and `.dll`
+
+These file types can execute code on import in the Unity Editor and may contain malicious logic.  
+For example, cosmetic assets (e.g., outfits downloaded from booth.pm) should not include executable scripts or assemblies unless explicitly intended.
+
+---
 ## Import
 
 `go get github.com/elianel/upx`
